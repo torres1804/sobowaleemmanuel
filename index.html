@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📌 Assignment Reminder App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📌 Assignment Reminder</h1>
+            <p>Stay on track with deadlines.<br>
+            <span class="subtext">Add assignments and get notified before they’re due!</span></p>
+        </header>
+        <form id="assignment-form">
+            <input type="text" id="name" placeholder="Assignment Name" required>
+            <input type="datetime-local" id="due" required>
+            <label class="notify-label">
+                <input type="checkbox" id="notify">
+                <span>Enable Notification</span>
+            </label>
+            <button type="submit">Add Assignment</button>
+        </form>
+        <ul id="assignment-list"></ul>
+        <footer>
+            <span>🧠 Notifications require permission • Mobile-friendly design</span>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
