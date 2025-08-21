@@ -1,169 +1,73 @@
-:root {
-    --primary: #2d4ceb;
-    --accent: #ff4c60;
-    --background: #f4f5fa;
-    --card-bg: #fff;
-    --card-border: #e5e8ef;
-    --radius: 12px;
-    --shadow: 0 4px 20px rgba(0,0,0,0.08);
-    --text: #222;
-    --subtext: #555;
-}
-
 body {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-    background: var(--background);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
-    color: var(--text);
 }
 
 .container {
-    max-width: 430px;
-    margin: 2em auto;
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 2em 1.4em 1em 1.4em;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-header {
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
     text-align: center;
-    margin-bottom: 1.5em;
 }
-h1 {
-    font-size: 2em;
-    margin-bottom: 0.3em;
-    color: var(--primary);
-}
+
 .subtext {
-    color: var(--subtext);
-    font-size: 1em;
+    font-size: 0.9rem;
+    color: #ccc;
 }
 
 form {
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    gap: 0.8em;
-    margin-bottom: 2em;
+    gap: 10px;
 }
 
-input[type="text"], input[type="datetime-local"] {
-    padding: 0.7em;
-    font-size: 1em;
-    border: 1px solid var(--card-border);
-    border-radius: var(--radius);
-    background: #f8f9fc;
-    outline: none;
-    transition: border 0.2s;
-}
-
-input[type="text"]:focus, input[type="datetime-local"]:focus {
-    border-color: var(--primary);
-}
-
-.notify-label {
-    display: flex;
-    align-items: center;
-    font-size: 1em;
-    gap: 0.5em;
-    color: var(--primary);
-}
-
-button[type="submit"] {
-    padding: 0.9em;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    color: white;
+input, button {
+    padding: 10px;
     border: none;
-    border-radius: var(--radius);
-    font-size: 1em;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input {
+    background: #fff;
+    color: #000;
+}
+
+button {
+    background: #4caf50;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(45,76,235,0.08);
-    transition: background 0.2s;
 }
-button[type="submit"]:hover {
-    background: linear-gradient(90deg, var(--accent), var(--primary));
+
+button:hover {
+    background: #45a049;
 }
 
 ul {
-    list-style: none;
+    margin-top: 15px;
     padding: 0;
-    margin: 0;
+    list-style: none;
 }
 
-.assignment {
-    background: #fff;
-    border: 1px solid var(--card-border);
-    border-radius: var(--radius);
-    padding: 1em;
-    margin-bottom: 1em;
-    box-shadow: 0 2px 10px rgba(45,76,235,0.06);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: box-shadow 0.2s;
-}
-.assignment:hover {
-    box-shadow: 0 4px 24px rgba(45,76,235,0.11);
-}
-
-.assignment-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3em;
-}
-
-.assignment-name {
-    font-weight: 600;
-    color: var(--primary);
-    font-size: 1.08em;
-}
-
-.assignment-date {
-    color: var(--subtext);
-    font-size: 0.98em;
-}
-
-.countdown {
-    font-weight: bold;
-    color: var(--accent);
-    font-size: 1.06em;
-    margin-top: 0.2em;
-}
-
-.delete-btn {
-    background: none;
-    border: none;
-    color: var(--accent);
-    font-size: 1.5em;
-    cursor: pointer;
-    margin-left: 1em;
-    border-radius: 50%;
-    transition: background 0.2s;
-    padding: 0.2em 0.4em;
-}
-.delete-btn:hover {
-    background: #ffe7ec;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.96em;
-    color: var(--subtext);
-    margin-top: 2em;
-}
-
-@media (max-width: 600px) {
-    .container {
-        max-width: 98vw;
-        padding: 1.2em 0.5em;
-    }
-    h1 {
-        font-size: 1.5em;
-    }
-    .assignment {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5em;
-    }
+ul li {
+    background: #333;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
 }
